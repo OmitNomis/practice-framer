@@ -3,8 +3,6 @@ import { motion } from "framer-motion";
 import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <div className="h-full flex flex-col items-center p-20">
       <h1 className="text-5xl font-bold">Hello World</h1>
