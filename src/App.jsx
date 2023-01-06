@@ -55,6 +55,26 @@ function App() {
       <br />
 
       <p>Let's experiment more</p>
+      <p>kinda pendulum-ish lol</p>
+      <br />
+
+      <motion.div
+        className={styles.blackBall}
+        initial={{ x: -100 }}
+        animate={{
+          x: [-100, 100, -100],
+          y: [
+            0, 4, 8, 12, 16, 20, 16, 12, 8, 4, 0, 0, 4, 8, 12, 16, 20, 16, 12,
+            8, 4, 0,
+          ],
+        }}
+        transition={{
+          duration: 2,
+          repeat: Infinity,
+          ease: "easeInOut",
+        }}
+      />
+
       <br />
       <br />
 
@@ -96,7 +116,7 @@ function App() {
       <br />
       <br />
 
-      <p>Cool Spnny Loading kinda thingy, very Cool</p>
+      <p>Cool Spnny Loading kinda thingy, very Cool: copied hehe</p>
       <motion.div
         className={`${styles.blackBall} mt-10`}
         animate={{
