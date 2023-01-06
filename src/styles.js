@@ -1,4 +1,4 @@
 const styles = {
-  codeBox: "w-full h-fit-content bg-gray-100 rounded-lg p-4",
+  blackBall: "h-10 w-10 rounded-full bg-black",
 };
 export { styles };
