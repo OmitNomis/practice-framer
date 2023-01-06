@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
+import { styles } from "./styles";
 import "./App.css";
 
 function App() {
@@ -9,13 +10,24 @@ function App() {
       <div className="mt-10">
         Hi, I am going to try learning framer motion :D
       </div>
-      <div className="mt-10">
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          className="h-10 w-10 rounded-full bg-black"
-        />
-      </div>
+      <br />
+      <br />
+      <p>Fade in thingy</p>
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        className="h-10 w-10 rounded-full bg-black"
+      />
+
+      <br />
+      <br />
+      <p>Animate position</p>
+      <motion.div
+        initial={{ x: 0 }}
+        animate={{ x: 100 }}
+        transition={{ duration: 2 }}
+        className="h-10 w-10 rounded-full bg-black"
+      />
     </div>
   );
 }
