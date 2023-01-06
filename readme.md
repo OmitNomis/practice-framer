@@ -1,15 +1,27 @@
-# Clone
+## Live Preview
 
-`git clone https://github.com/OmitNomis/practice-framer.git`
+https://myframerjourney.netlify.app
 
-# Go in cloned dir
+## Clone
 
-`cd practice-framer`
+```bash
+git clone https://github.com/OmitNomis/practice-framer.git
+```
 
-# Install Requirements
+## Go in cloned dir
 
-`yarn`
+```bash
+cd practice-framer
+```
 
-# Run
+## Install Requirements
 
-`yarn run dev`
+```
+ bash yarn
+```
+
+## Run
+
+```bash
+yarn run dev
+```
