@@ -28,6 +28,16 @@ function App() {
         transition={{ duration: 2 }}
         className="h-10 w-10 rounded-full bg-black"
       />
+
+      <br />
+      <br />
+
+      <p>Hover and tap Effect</p>
+      <motion.div
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.9 }}
+        className="h-10 w-10 rounded-full bg-black"
+      />
     </div>
   );
 }
