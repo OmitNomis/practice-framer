@@ -16,8 +16,8 @@ cd practice-framer
 
 ## Install Requirements
 
-```
- bash yarn
+```bash
+yarn
 ```
 
 ## Run
