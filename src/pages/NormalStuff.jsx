@@ -4,10 +4,6 @@ import { styles } from "../styles";
 function NormalStuff() {
   return (
     <div className="h-full flex flex-col items-center p-20 pb-40">
-      <h1 className="text-5xl font-bold">Hello World</h1>
-      <div className="mt-10">
-        Hi, I am going to try learning framer motion :D
-      </div>
       <br />
       <br />
       <p>Fade in thingy</p>
