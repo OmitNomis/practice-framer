@@ -21,10 +21,9 @@ function ModalStuff() {
         <br />
         <div className="flex">
           {animateStyles.map((style) => (
-            <div className={` mx-3 rounded-lg`}>
+            <div key={style} className={` mx-3 rounded-lg`}>
               <FencyRadio
                 onClick={() => setanimationStyle(style)}
-                key={style}
                 text={style}
                 selected={animationStyle === style ? true : false}
               />
