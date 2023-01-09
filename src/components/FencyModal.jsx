@@ -23,6 +23,12 @@ function FencyModal({ isVisible, onClose, animationStyle }) {
       dropIn.exit = { x: "100vw", opacity: 0 };
       break;
 
+    case "slide top-bottom":
+      dropIn.hidden = { y: "-100vh", opacity: 0 };
+      dropIn.visible = { y: "0", opacity: 1 };
+      dropIn.exit = { y: "100vh", opacity: 0 };
+      break;
+
     case "scale":
       dropIn.hidden = { scale: 0, opacity: 0 };
       dropIn.visible = {
