@@ -4,7 +4,7 @@ import FencyButton from "./FencyButton";
 import FencyBackdrop from "./FencyBackdrop";
 
 function FencyModal({ isVisible, onClose, animationStyle }) {
-  let dropIn = {
+  let pageVariants = {
     hidden: {},
     visible: {},
     exit: {},
@@ -12,42 +12,42 @@ function FencyModal({ isVisible, onClose, animationStyle }) {
 
   switch (animationStyle) {
     case "fade":
-      dropIn.hidden = { opacity: 0 };
-      dropIn.visible = { opacity: 1 };
-      dropIn.exit = { opacity: 0 };
+      pageVariants.hidden = { opacity: 0 };
+      pageVariants.visible = { opacity: 1 };
+      pageVariants.exit = { opacity: 0 };
       break;
 
     case "slide left-right":
-      dropIn.hidden = { x: "-100vw", opacity: 0 };
-      dropIn.visible = { x: "0", opacity: 1 };
-      dropIn.exit = { x: "100vw", opacity: 0 };
+      pageVariants.hidden = { x: "-100vw", opacity: 0 };
+      pageVariants.visible = { x: "0", opacity: 1 };
+      pageVariants.exit = { x: "100vw", opacity: 0 };
       break;
 
     case "slide top-bottom":
-      dropIn.hidden = { y: "-100vh", opacity: 0 };
-      dropIn.visible = { y: "0", opacity: 1 };
-      dropIn.exit = { y: "100vh", opacity: 0 };
+      pageVariants.hidden = { y: "-100vh", opacity: 0 };
+      pageVariants.visible = { y: "0", opacity: 1 };
+      pageVariants.exit = { y: "100vh", opacity: 0 };
       break;
 
     case "scale":
-      dropIn.hidden = { scale: 0, opacity: 0 };
-      dropIn.visible = {
+      pageVariants.hidden = { scale: 0, opacity: 0 };
+      pageVariants.visible = {
         scale: 1,
         opacity: 1,
         transition: { type: "spring", duration: 1 },
       };
-      dropIn.exit = { scale: 0, opacity: 0 };
+      pageVariants.exit = { scale: 0, opacity: 0 };
       break;
 
     case "rotate":
-      dropIn.hidden = { scale: 0, opacity: 0, rotate: 0 };
-      dropIn.visible = {
+      pageVariants.hidden = { scale: 0, opacity: 0, rotate: 0 };
+      pageVariants.visible = {
         scale: 1,
         opacity: 1,
         rotate: 360,
         transition: { type: "spring", duration: 1 },
       };
-      dropIn.exit = {
+      pageVariants.exit = {
         scale: 0,
         opacity: 1,
         rotate: 0,
@@ -56,14 +56,14 @@ function FencyModal({ isVisible, onClose, animationStyle }) {
       break;
 
     case "flip":
-      dropIn.hidden = { opacity: 0, rotateY: -180, scale: 0 };
-      dropIn.visible = {
+      pageVariants.hidden = { opacity: 0, rotateY: -180, scale: 0 };
+      pageVariants.visible = {
         opacity: 1,
         rotateY: 0,
         scale: 1,
         transition: { duration: 0.5 },
       };
-      dropIn.exit = {
+      pageVariants.exit = {
         opacity: 0,
         rotateY: 180,
         transition: { duration: 0.5 },
@@ -72,14 +72,14 @@ function FencyModal({ isVisible, onClose, animationStyle }) {
       break;
 
     case "flip-slide-y":
-      dropIn.hidden = { opacity: 0, y: "-100vh", rotateX: -720 };
-      dropIn.visible = {
+      pageVariants.hidden = { opacity: 0, y: "-100vh", rotateX: -720 };
+      pageVariants.visible = {
         opacity: 1,
         y: 0,
         rotateX: 0,
         transition: { duration: 0.5 },
       };
-      dropIn.exit = {
+      pageVariants.exit = {
         opacity: 0,
         rotateX: 720,
         transition: 0.5,
@@ -88,14 +88,14 @@ function FencyModal({ isVisible, onClose, animationStyle }) {
       };
       break;
     case "flip-slide-x":
-      dropIn.hidden = { opacity: 0, x: "-100vw", rotateY: -720 };
-      dropIn.visible = {
+      pageVariants.hidden = { opacity: 0, x: "-100vw", rotateY: -720 };
+      pageVariants.visible = {
         opacity: 1,
         x: "0",
         rotateY: 0,
         transition: { duration: 0.5 },
       };
-      dropIn.exit = {
+      pageVariants.exit = {
         opacity: 0,
         rotateY: 720,
         transition: 0.5,
@@ -107,7 +107,7 @@ function FencyModal({ isVisible, onClose, animationStyle }) {
     default:
       break;
   }
-  console.log(dropIn);
+  console.log(pageVariants);
 
   return (
     <AnimatePresence mode="wait" initial={false}>
@@ -115,7 +115,7 @@ function FencyModal({ isVisible, onClose, animationStyle }) {
         <FencyBackdrop onClick={onClose}>
           <motion.div
             onClick={(e) => e.stopPropagation()}
-            variants={dropIn}
+            variants={pageVariants}
             initial="hidden"
             animate="visible"
             exit="exit"
