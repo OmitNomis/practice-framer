@@ -24,6 +24,9 @@ function FencyModal({ isVisible, onClose, animationStyle }) {
       break;
 
     case "scale":
+      dropIn.hidden = { scale: 0, opacity: 0 };
+      dropIn.visible = { scale: 1, opacity: 1, transition: { type: "spring" } };
+      dropIn.exit = { scale: 0, opacity: 0 };
       break;
 
     case "rotate":
