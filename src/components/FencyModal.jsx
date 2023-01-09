@@ -17,7 +17,7 @@ function FencyModal({ isVisible, onClose, animationStyle }) {
       dropIn.exit = { opacity: 0 };
       break;
 
-    case "slide":
+    case "slide left-right":
       dropIn.hidden = { x: "-100vw", opacity: 0 };
       dropIn.visible = { x: "0", opacity: 1 };
       dropIn.exit = { x: "100vw", opacity: 0 };

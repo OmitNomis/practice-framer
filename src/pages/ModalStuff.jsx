@@ -6,7 +6,13 @@ import FencyRadio from "../components/FencyRadio";
 function ModalStuff() {
   const [modalVisible, setModalVisible] = useState(false);
   const [animationStyle, setanimationStyle] = useState("fade");
-  let animateStyles = ["fade", "slide", "scale", "rotate"];
+  let animateStyles = [
+    "fade",
+    "slide left-right",
+    "slide top-bottom",
+    "scale",
+    "rotate",
+  ];
 
   const toggleModal = () => {
     setModalVisible(!modalVisible);
