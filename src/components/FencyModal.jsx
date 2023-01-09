@@ -55,6 +55,21 @@ function FencyModal({ isVisible, onClose, animationStyle }) {
       };
       break;
 
+    case "flip":
+      dropIn.hidden = { opacity: 0, rotateY: -180, scale: 0 };
+      dropIn.visible = {
+        opacity: 1,
+        rotateY: 0,
+        scale: 1,
+        transition: { duration: 0.5 },
+      };
+      dropIn.exit = {
+        opacity: 0,
+        rotateY: 180,
+        transition: { duration: 0.5 },
+        scale: 0,
+      };
+
     default:
       break;
   }

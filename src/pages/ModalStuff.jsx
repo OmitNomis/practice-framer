@@ -15,6 +15,7 @@ function ModalStuff() {
     "slide top-bottom",
     "scale",
     "rotate",
+    "flip",
   ];
 
   const toggleModal = () => {
