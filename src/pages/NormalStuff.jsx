@@ -1,7 +1,11 @@
-import { useState } from "react";
+import { useEffect } from "react";
 import { motion } from "framer-motion";
 import { styles } from "../styles";
 function NormalStuff() {
+  useEffect(() => {
+    document.title = "Normal Framer Stuff";
+  }, []);
+
   return (
     <div className="h-full flex flex-col items-center p-20 pb-40">
       <a className="self-start " href="/">

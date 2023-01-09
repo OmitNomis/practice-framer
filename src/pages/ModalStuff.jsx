@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import FencyButton from "../components/FencyButton";
 import FencyModal from "../components/FencyModal";
 import FencyRadio from "../components/FencyRadio";
@@ -6,6 +6,9 @@ import FencyRadio from "../components/FencyRadio";
 function ModalStuff() {
   const [modalVisible, setModalVisible] = useState(false);
   const [animationStyle, setanimationStyle] = useState("fade");
+  useEffect(() => {
+    document.title = "Fency Modal Stuff";
+  }, []);
   let animateStyles = [
     "fade",
     "slide left-right",
