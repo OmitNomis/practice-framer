@@ -8,7 +8,7 @@ function FencyRadio({ text, onClick, selected }) {
         onClick={onClick}
         className={`${
           selected ? "border-[#852100] border-[3px]" : ""
-        } px-10 py-3 rounded-2xl  font-bold bg-neutral-700 `}
+        } px-10 py-3 rounded-2xl  font-bold bg-neutral-700 my-3 `}
       >
         {text}
       </button>

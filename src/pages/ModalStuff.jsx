@@ -16,6 +16,8 @@ function ModalStuff() {
     "scale",
     "rotate",
     "flip",
+    "flip-slide-y",
+    "flip-slide-x",
   ];
 
   const toggleModal = () => {
