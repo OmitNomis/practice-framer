@@ -20,6 +20,9 @@ function ModalStuff() {
 
   return (
     <div className="h-full flex flex-col items-center p-20 pb-40">
+      <a className="self-start " href="/">
+        <p>{"< Back"}</p>
+      </a>
       <h1 className="text-5xl font-bold">Modal Stuff</h1>
       <div>
         <br />

@@ -4,6 +4,9 @@ import { styles } from "../styles";
 function NormalStuff() {
   return (
     <div className="h-full flex flex-col items-center p-20 pb-40">
+      <a className="self-start " href="/">
+        <p>{"< Back"}</p>
+      </a>
       <br />
       <br />
       <p>Fade in thingy</p>
