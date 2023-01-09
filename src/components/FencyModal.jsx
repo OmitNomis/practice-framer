@@ -70,7 +70,7 @@ function FencyModal({ isVisible, onClose, animationStyle }) {
             initial="hidden"
             animate="visible"
             exit="exit"
-            className="p-10 h-[50%] w-[70%] bg-[#242424] flex flex-col rounded-lg items-center"
+            className="p-10 bg-[#242424] flex flex-col rounded-lg items-center"
           >
             <p>Hello Everyone!</p>
             <p>This is modal</p>

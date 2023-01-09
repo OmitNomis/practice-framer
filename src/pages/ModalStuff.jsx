@@ -31,7 +31,7 @@ function ModalStuff() {
         <br />
         <p>Select Style</p>
         <br />
-        <div className="flex items-center">
+        <div className="flex items-center flex-wrap">
           {animateStyles.map((style) => (
             <div key={style} className={` mx-3 rounded-lg`}>
               <FencyRadio
