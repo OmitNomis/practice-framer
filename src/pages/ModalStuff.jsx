@@ -19,7 +19,7 @@ function ModalStuff() {
         <br />
         <p>Select Style</p>
         <br />
-        <div className="flex">
+        <div className="flex items-center">
           {animateStyles.map((style) => (
             <div key={style} className={` mx-3 rounded-lg`}>
               <FencyRadio
@@ -35,13 +35,11 @@ function ModalStuff() {
         <FencyButton text={"Open Modal"} onClick={toggleModal} />
       </div>
 
-      <div>
-        <FencyModal
-          isVisible={modalVisible}
-          onClose={toggleModal}
-          animationStyle={animationStyle}
-        />
-      </div>
+      <FencyModal
+        isVisible={modalVisible}
+        onClose={toggleModal}
+        animationStyle={animationStyle}
+      />
     </div>
   );
 }

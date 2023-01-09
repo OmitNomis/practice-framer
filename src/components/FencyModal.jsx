@@ -1,32 +1,65 @@
 import React, { useEffect, useRef } from "react";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import FencyButton from "./FencyButton";
+import FencyBackdrop from "./FencyBackdrop";
 
-function FencyModal({ isVisible, onClose, initial, animate, transition }) {
+function FencyModal({ isVisible, onClose, animationStyle }) {
+  let dropIn = {
+    hidden: {},
+    visible: {},
+    exit: {},
+  };
+
+  switch (animationStyle) {
+    case "fade":
+      dropIn.hidden = { opacity: 0 };
+      dropIn.visible = { opacity: 1 };
+      dropIn.exit = { opacity: 0 };
+      break;
+
+    case "slide":
+      dropIn.hidden = { x: "-100vw", opacity: 0 };
+      dropIn.visible = { x: "0", opacity: 1 };
+      dropIn.exit = { x: "100vw", opacity: 0 };
+      break;
+
+    case "scale":
+      dropIn.hidden = { scale: 0, opacity: 0 };
+      dropIn.visible = { scale: 1, opacity: 1, transition: { type: "spring" } };
+      dropIn.exit = { scale: 0, opacity: 0 };
+      break;
+
+    case "rotate":
+      break;
+
+    default:
+      break;
+  }
+  console.log(dropIn);
+
   return (
-    <div
-      onClick={onClose}
-      className={
-        isVisible
-          ? "fixed h-full w-full top-0 left-0 bg-black bg-opacity-60 flex flex-col justify-center items-center"
-          : "hidden"
-      }
-    >
-      <motion.div
-        initial={{ rotate: 0, scale: 0, opacity: 0 }}
-        animate={{ rotate: 360, scale: 1, opacity: 1 }}
-        transition={{ duration: 2 }}
-        className="p-10 h-[50%] w-[70%] bg-[#242424] flex flex-col rounded-lg items-center"
-      >
-        <p>Hello Everyone!</p>
-        <p>This is modal</p>
-        <p>Click on the button to close</p>
-        <p>Or anywhere outside the Modal {":>"}</p>
-        <div className="mt-10">
-          <FencyButton onClick={onClose} text="Close" />
-        </div>
-      </motion.div>
-    </div>
+    <AnimatePresence mode="wait" initial={false}>
+      {isVisible && (
+        <FencyBackdrop onClick={onClose}>
+          <motion.div
+            onClick={(e) => e.stopPropagation()}
+            variants={dropIn}
+            initial="hidden"
+            animate="visible"
+            exit="exit"
+            className="p-10 h-[50%] w-[70%] bg-[#242424] flex flex-col rounded-lg items-center"
+          >
+            <p>Hello Everyone!</p>
+            <p>This is modal</p>
+            <p>Click on the button to close</p>
+            <p>Or anywhere outside the Modal {":>"}</p>
+            <div className="mt-10">
+              <FencyButton onClick={onClose} text="Close" />
+            </div>
+          </motion.div>
+        </FencyBackdrop>
+      )}
+    </AnimatePresence>
   );
 }
 
