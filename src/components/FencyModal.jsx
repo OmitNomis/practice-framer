@@ -82,7 +82,6 @@ function FencyModal({ isVisible, onClose, animationStyle }) {
       pageVariants.exit = {
         opacity: 0,
         rotateX: 720,
-        transition: 0.5,
         y: "100vh",
         transition: { duration: 0.5 },
       };
@@ -98,7 +97,6 @@ function FencyModal({ isVisible, onClose, animationStyle }) {
       pageVariants.exit = {
         opacity: 0,
         rotateY: 720,
-        transition: 0.5,
         x: "100vw",
         transition: { duration: 0.5 },
       };
