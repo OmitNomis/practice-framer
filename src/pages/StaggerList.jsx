@@ -16,7 +16,10 @@ function StaggerList() {
 
   let animatingList = list.slice(lastChangedIndex);
   return (
-    <div className=" h-full flex flex-col items-center p-20 pb-40 fixed overflow-y-scroll w-full ">
+    <div className=" h-full flex flex-col items-center p-10 pb-40 fixed overflow-y-scroll w-full ">
+      <a className="self-start " href="/">
+        <p>{"< Back"}</p>
+      </a>
       <p>Try removing stuff from the list and look at the stagger animation</p>
       <div>Could be a bit buggy sometimes, but it works for the most part</div>
       <br />
