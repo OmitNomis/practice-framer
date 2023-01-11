@@ -18,6 +18,9 @@ function Home() {
           <li>
             <a href="/modal-stuff">Modal Stuff</a>
           </li>
+          <li>
+            <a href="/stagger-list">Stagger Animation List</a>
+          </li>
         </ul>
       </div>
     </div>
