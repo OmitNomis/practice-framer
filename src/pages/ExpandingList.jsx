@@ -1,4 +1,5 @@
 import React from "react";
+import FencyCard from "../components/FencyCard";
 
 const data = [
   {
@@ -22,7 +23,20 @@ const data = [
 ];
 
 function ExpandingList() {
-  return <div></div>;
+  return (
+    // screen
+    <div className="h-full flex flex-col items-center p-20 pb-40">
+      {/* title */}
+      <h1 className="text-5xl font-bold">Expanding List</h1>
+      {/* cards in grid */}
+
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-10">
+        {data.map((item, index) => (
+          <FencyCard data={item} key={index} />
+        ))}
+      </div>
+    </div>
+  );
 }
 
 export default ExpandingList;
