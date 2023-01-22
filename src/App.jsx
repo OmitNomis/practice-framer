@@ -4,6 +4,7 @@ import NormalStuff from "./pages/NormalStuff";
 import ModalStuff from "./pages/ModalStuff";
 import Home from "./pages/Home";
 import StaggerList from "./pages/StaggerList";
+import ExpandingList from "./pages/ExpandingList";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route path="/normal-stuff" element={<NormalStuff />} />
         <Route path="/modal-stuff" element={<ModalStuff />} />
         <Route path="/stagger-list" element={<StaggerList />} />
+        <Route path="/expanding-list" element={<ExpandingList />} />
       </Routes>
     </BrowserRouter>
   );

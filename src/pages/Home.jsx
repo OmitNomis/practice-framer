@@ -21,6 +21,9 @@ function Home() {
           <li>
             <a href="/stagger-list">Stagger Animation List</a>
           </li>
+          <li>
+            <a href="/expanding-list">Expanding List</a>
+          </li>
         </ul>
       </div>
     </div>
